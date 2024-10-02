@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10 Seconds Timer Game</title>
+    </head>
+    <body>
+        <h1>10 Seconds Timer Game</h1>
+        <form method="post">
+            <p>{{ message }}</p>
+            <input type="submit" name="{{ button }}" value="{{ button.capitalize() }}">
+        </form>
+
+        {% if guessed_time %}
+            <p>You guessed {{ guessed_time:.1f }} seconds.</p>
+        {% endif %}
+        
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+    </body>
+</html>
